@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "qml-honorsthesis"
+version = "0.1.0"
+description = ""
+authors = ["J. Simon Richard <jsimonrichard@gmail.com>"]
+readme = "README.md"
+packages = [{include = "qml_honorsthesis"}]
+
+[tool.poetry.dependencies]
+python = "3.10.*"
+numpy = "^1.26.0"
+scipy = "^1.11.2"
+matplotlib = "^3.8.0"
+qiskit = "^0.44.1"
+pylatexenc = "^2.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+jupyterlab = "^4.0.6"
