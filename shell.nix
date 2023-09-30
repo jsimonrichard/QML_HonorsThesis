@@ -5,5 +5,8 @@ nixpkgs.mkShell {
     python310
   ];
 
-  LD_LIBRARY_PATH = "${nixpkgs.stdenv.cc.cc.lib}/lib";
+  LD_LIBRARY_PATH = builtins.concatStringsSep ":" [
+    "${nixpkgs.stdenv.cc.cc.lib}/lib"
+    "${nixpkgs.zlib.outPath}/lib"
+  ];
 }

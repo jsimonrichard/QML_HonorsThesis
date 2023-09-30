@@ -1,0 +1,8 @@
+. /etc/os-release
+if [ "$ID" = "nixos" ]; then
+  nix-shell --command "poetry run jupyter lab"
+  exit 0
+else
+  poetry run juptyer lab
+  exit 0
+fi
